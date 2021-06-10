@@ -1,0 +1,22 @@
+{
+    "name": "benjamin/git-rebase-demo",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Benjamin Delespierre",
+            "email": "benjamin.delespierre@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GitRebaseDemo\\": "src/",
+            "Tests\\": "tests/"
+        }
+    }
+}
