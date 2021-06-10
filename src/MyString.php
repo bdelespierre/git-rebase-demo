@@ -13,4 +13,9 @@ class MyString
     {
         return $this->value;
     }
+
+    public function append(string $suffix): void
+    {
+        $this->value .= $suffix;
+    }
 }
