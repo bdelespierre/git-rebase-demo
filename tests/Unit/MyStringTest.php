@@ -24,17 +24,23 @@ class MyStringTest extends TestCase
     }
 
     /**
+     * @dataProvider appendDataProvider
      * @covers ::append
      */
-    public function testAppend()
+    public function testAppend(string $value, string $suffix, string $expected)
     {
-        $string = new MyString("hello");
-        $string->append(" world!");
+        $string = new MyString($value);
+        $string->append($suffix);
 
         $this->assertEquals(
-            "hello world!",
+            $expected,
             (string) $string
         );
+    }
+
+    public function appendDataProvider()
+    {
+        return include __DIR__ . '/Data/MyStringTest/TestAppend.php';
     }
 
     /**
