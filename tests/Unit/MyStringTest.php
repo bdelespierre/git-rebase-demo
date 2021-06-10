@@ -36,4 +36,18 @@ class MyStringTest extends TestCase
             (string) $string
         );
     }
+
+    /**
+     * @covers ::prepend
+     */
+    public function testPrepend()
+    {
+        $string = new MyString("world!");
+        $string->prepend("hello ");
+
+        $this->assertEquals(
+            "hello world!",
+            (string) $string
+        );
+    }
 }

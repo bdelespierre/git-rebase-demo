@@ -18,4 +18,9 @@ class MyString
     {
         $this->value .= $suffix;
     }
+
+    public function prepend(string $prefix): void
+    {
+        $this->value = "{$prefix}{$this->value}";
+    }
 }
