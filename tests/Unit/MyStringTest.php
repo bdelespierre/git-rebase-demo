@@ -56,4 +56,16 @@ class MyStringTest extends TestCase
             (string) $string
         );
     }
+
+    /**
+     * @covers ::unbox
+     */
+    public function testUnbox()
+    {
+        $string = new MyString("hello world!");
+
+        $this->assertTrue(
+            "hello world!" === $string->unbox()
+        );
+    }
 }

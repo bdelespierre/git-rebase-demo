@@ -2,7 +2,9 @@
 
 namespace GitRebaseDemo;
 
-class MyString
+use GitRebaseDemo\Interfaces\WrapperInterface;
+
+class MyString implements WrapperInterface
 {
     public function __construct(
         public string $value,
@@ -26,6 +28,11 @@ class MyString
     public function prepend(string $prefix): void
     {
         $this->value = "{$prefix}{$this->value}";
+    }
+
+    public function unbox(): string
+    {
+        return $this->value;
     }
 
     protected function isMetricMassUnit(string $suffix): bool
